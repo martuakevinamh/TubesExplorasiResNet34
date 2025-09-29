@@ -8,7 +8,7 @@ Pada Tahap 1 saya menggunakan model plain34, dimana model ini tidak menggunakan 
 
 ![grapik plain34](grapic_plan34.jpg)
 
-![visual angka plain34](acc_plan34.jpg)
+![visual angka plain34](acc_plain34.jpg)
 
 Sekarang Tahap 2 saya menggunakan ResNet34 dengan menggunakan skip connection, dari waktu training yang digunakan untuk tahap 2 ini lebih lama dibandingkan dengan waktu training pada tahap 1 tetapi untuk dari segi visual grafik dan angka menunjukkan perbedaan signifikan dimana pada tahap 2 ini lebih baik dibandingkan dengan tahap 1. Proses "menggabungkan" (out += self.shortcut(x)) inilah yang memakan waktu ekstra. Meskipun hanya operasi penjumlahan sederhana, operasi ini terjadi puluhan kali di dalam model, untuk setiap gambar, di setiap batch, dan di setiap epoch. Jika dijumlahkan, semua pekerjaan ekstra kecil ini membuat total waktu training menjadi sedikit lebih lama.
 
