@@ -23,13 +23,16 @@ Kenapa Training ResNet-34 (Tahap 2) Lebih Lama?
 Pertanyaan yang sangat bagus! Waktu training Tahap 2 (ResNet-34) memang sedikit lebih lama karena ada operasi komputasi tambahan di setiap bloknya, yaitu proses Skip Connection itu sendiri.
 
 Model Plain-34 :
-Ini seperti jalur perakitan biasa. Setiap pekerja (layer) menerima barang dari pekerja sebelumnya, mengerjakannya, lalu memberikannya ke pekerja selanjutnya. Alurnya lurus, sederhana, dan cepat.
+Ini seperti jalur perakitan biasa. Setiap layer menerima barang dari layer sebelumnya, mengerjakannya, lalu memberikannya layer selanjutnya. Alurnya lurus, sederhana, dan cepat.
 
 Model ResNet-34 :
-Ini adalah pabrik yang lebih canggih. Setiap pekerja tidak hanya mengerjakan barang yang ia terima, tapi ia juga punya tugas tambahan: mengambil kembali barang asli sebelum diproses olehnya (lewat "jalur tol") dan menggabungkannya dengan hasil kerjanya.
+Ini adalah pabrik yang lebih canggih. Setiap LAYER tidak hanya mengerjakan barang yang ia terima, tapi ia juga punya tugas tambahan: mengambil kembali barang asli sebelum diproseS dan menggabungkannya dengan hasilNYA
 
-Proses "mengambil dan menggabungkan" inilah skip connection (dalam kode: out += self.shortcut(x)). Meskipun kelihatannya sepele, ini adalah pekerjaan ekstra yang harus dilakukan di setiap blok, untuk setiap gambar, di setiap epoch. Jika dijumlahkan, semua pekerjaan ekstra kecil ini membuat total waktu training menjadi sedikit lebih lama.
+Proses "mengambil dan menggabungkan" inilah skip connection (dalam kode: out += self.shortcut(x)). Meskipun kelihatannya sepele, ini adalah layer ekstra yang harus dilakukan di setiap blok, untuk setiap gambar, di setiap epoch. Jika dijumlahkan, semua pekerjaan ekstra kecil ini membuat total waktu training menjadi sedikit lebih lama.
 
 Terutama saat ukuran gambar diubah (di awal stage 2, 3, dan 4), proses "penggabungan" ini bahkan memerlukan satu langkah konvolusi tambahan untuk menyamakan ukuran, yang menambah lebih banyak kalkulasi.
 
 ![grapik perbandingan](grapik_perbandingan.jpg)
+
+### LINK 
+https://drive.google.com/drive/folders/1QwTqw3wUaVsGepDyQ9YafnEehdb-bUif
