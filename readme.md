@@ -2,7 +2,7 @@
 
 Pada Data Augmention saya gunakan ada pada gambar dibawah 
 
-![grapik plain34](TubesExplorasiResNet34/data_augmention.jpg)
+![grapik plain34](data_augmention.jpg)
 
 Pada Tahap 1 saya menggunakan model plain34, dimana model ini tidak menggunakan skip conection dimana hasil dari traning menggunakan dataset pada tubes 1.Terdapat gambar dibawah menunjukkan hasil dari penggunaan model plain34 dengan tidak ada skip conection. Dari visual grafik dan angka nya menunjukkan hasil yang bagus dan terdapat peningkatan signifikan.
 
